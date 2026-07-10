@@ -3,6 +3,8 @@
 
 Video: https://youtu.be/kLUdumt8lNY
 
+SPA: Gran ejemplo. Del video "Así deberías Estructurar tus Proyectos en Angular 17", de  Garaje de ideas | Tech en YouTube
+
 ---
 
 # AngularArquitectura
