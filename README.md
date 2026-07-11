@@ -7,7 +7,7 @@ SPA: Gran ejemplo. Del video "Así deberías Estructurar tus Proyectos en Angula
 
 ---
 
-# AngularArquitectura
+# ng-template-one v20
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.10.
 

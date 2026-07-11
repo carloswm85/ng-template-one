@@ -9,8 +9,8 @@ import { FooterComponent } from './shared/components/footer/footer.component';
   standalone: true,
   imports: [CommonModule, RouterOutlet, NavBarComponent, FooterComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
 })
 export class AppComponent {
-  title = 'AngularArquitectura';
+  title = 'ng-template-one v20';
 }
