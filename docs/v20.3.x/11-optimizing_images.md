@@ -41,7 +41,10 @@ export const appConfig = {
     provideImgixLoader('https://my.base.url/'),  // prefixed to all ngSrc paths
   ],
 };
-// <img ngSrc="image.png" /> → https://my.base.url/image.png
+// <img ngSrc="image.png" />
+// RESULT IS: https://my.base.url/image.png
 ```
 
 > `width` and `height` are **required** on every image (unless using `fill`) to prevent layout shift (CLS).
+>
+> Cumulative Layout Shift (CLS) is a Google Core Web Vitals metric that measures how much webpage content unexpectedly jumps or shifts around while a website loads.

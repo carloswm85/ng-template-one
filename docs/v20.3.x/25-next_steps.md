@@ -7,7 +7,7 @@ You've completed the Angular fundamentals. Here's what to explore next.
 ```ts
 import { Component, signal, computed, effect } from '@angular/core';
 
-@Component({ template: `<p>{{ doubled() }}</p>` })
+@Component({ template: `<p>{{ doubled() }}</p> })
 export class App {
   count   = signal(0);                        // writable reactive signal
   doubled = computed(() => this.count() * 2); // auto-updates when count changes
@@ -61,11 +61,11 @@ export const routes: Routes = [
 
 ## Further Reading
 
-| Topic | Link |
-|---|---|
-| Signals | `<https://angular.dev/guide/signals>` |
-| HTTP Client | `<https://angular.dev/guide/http>` |
-| Routing | `<https://angular.dev/guide/routing>` |
-| Testing | `<https://angular.dev/guide/testing>` |
-| Angular CLI | `<https://angular.dev/tools/cli>` |
-| Full Tutorial | `<https://angular.dev/tutorials/learn-angular>` |
+| Topic         | Link                                          |
+| ------------- | --------------------------------------------- |
+| Signals       | <https://angular.dev/guide/signals>           |
+| HTTP Client   | <https://angular.dev/guide/http>              |
+| Routing       | <https://angular.dev/guide/routing>           |
+| Testing       | <https://angular.dev/guide/testing>           |
+| Angular CLI   | <https://angular.dev/tools/cli>               |
+| Full Tutorial | <https://angular.dev/tutorials/learn-angular> |

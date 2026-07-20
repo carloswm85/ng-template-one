@@ -29,7 +29,7 @@ import { ReversePipe } from './reverse.pipe';
   selector: 'app-root',
   template: `
     <!-- pipe name matches the name in @Pipe decorator -->
-    <p>Reverse Machine: {{ word | reverse }}</p>   <!-- !elgnA -->
+    <p>Reverse Machine: {{ word | reverse }}</p>   <!-- !ralugnA -->
   `,
   imports: [ReversePipe],       // add custom pipe to imports like any other pipe
 })

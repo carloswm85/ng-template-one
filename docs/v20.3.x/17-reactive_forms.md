@@ -1,6 +1,7 @@
 # 17 — Reactive Forms
 
-Reactive forms manage form state in the component class using `FormGroup` and `FormControl`. Logic stays in TypeScript, not the template.
+- Reactive forms manage form state in the component class using `FormGroup` and `FormControl`.
+- Logic stays in TypeScript, not the template.
 
 ```ts
 import { Component } from '@angular/core';

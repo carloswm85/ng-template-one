@@ -33,11 +33,11 @@ export class App {}
 
 **Available triggers:**
 
-| Trigger | Loads when… |
-|---|---|
-| `on idle` | Browser is idle (default) |
-| `on viewport` | Element enters the viewport |
+| Trigger          | Loads when…                        |
+| ---------------- | ---------------------------------- |
+| `on idle`        | Browser is idle (default)          |
+| `on viewport`    | Element enters the viewport        |
 | `on interaction` | User clicks or focuses the element |
-| `on hover` | User hovers over the element |
-| `on timer(2s)` | After a fixed delay |
-| `when condition` | Expression becomes truthy |
+| `on hover`       | User hovers over the element       |
+| `on timer(2s)`   | After a fixed delay                |
+| `when condition` | Expression becomes truthy          |

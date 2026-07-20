@@ -1,3 +1,9 @@
+- [Angular v20](#angular-v20)
+
+---
+
+<https://roadmap.sh/angular>
+
 # Angular v20
 
 - Angular tutorial: <https://v20.angular.dev/tutorials/learn-angular>

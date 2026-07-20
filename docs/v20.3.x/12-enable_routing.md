@@ -32,7 +32,9 @@ import { RouterOutlet } from '@angular/router';
       <a href="/">Home</a>  |
       <a href="/user">User</a>
     </nav>
-    <router-outlet />                   <!-- matched component renders here -->
+
+    <!-- matched component renders here -->
+    <router-outlet />
   `,
   imports: [RouterOutlet],
 })

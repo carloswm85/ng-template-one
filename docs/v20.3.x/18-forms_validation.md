@@ -43,12 +43,12 @@ export class App {
 
 **Built-in validators:**
 
-| Validator | Description |
-|---|---|
-| `Validators.required` | Field must not be empty |
-| `Validators.email` | Must be a valid email format |
-| `Validators.minLength(n)` | Minimum character count |
-| `Validators.maxLength(n)` | Maximum character count |
-| `Validators.pattern(regex)` | Must match a regex |
-| `Validators.min(n)` | Minimum numeric value |
-| `Validators.max(n)` | Maximum numeric value |
+| Validator                   | Description                  |
+| --------------------------- | ---------------------------- |
+| `Validators.required`       | Field must not be empty      |
+| `Validators.email`          | Must be a valid email format |
+| `Validators.minLength(n)`   | Minimum character count      |
+| `Validators.maxLength(n)`   | Maximum character count      |
+| `Validators.pattern(regex)` | Must match a regex           |
+| `Validators.min(n)`         | Minimum numeric value        |
+| `Validators.max(n)`         | Maximum numeric value        |

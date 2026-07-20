@@ -50,11 +50,11 @@ export class App {
 
 **Constructor DI vs `inject()` — when to use each:**
 
-| | `inject()` | Constructor DI |
-|---|---|---|
-| Style | Functional / modern | Class-based / traditional |
-| Works in | Field initializers, factories, guards | Constructor body only |
-| Recommended for | Standalone components (Angular 14+) | Libraries, pre-existing codebases |
-| Testability | Easy to mock | Easy to mock |
+|                 | `inject()`                            | Constructor DI                    |
+| --------------- | ------------------------------------- | --------------------------------- |
+| Style           | Functional / modern                   | Class-based / traditional         |
+| Works in        | Field initializers, factories, guards | Constructor body only             |
+| Recommended for | Standalone components (Angular 14+)   | Libraries, pre-existing codebases |
+| Testability     | Easy to mock                          | Easy to mock                      |
 
 > Both approaches are fully supported in Angular 20. Prefer `inject()` for new standalone-component code.

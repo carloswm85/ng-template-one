@@ -1,6 +1,7 @@
 # 19 — Creating an Injectable Service
 
-Services encapsulate shared logic and data. Mark them with `@Injectable` so Angular's DI system can provide them.
+- Services encapsulate shared logic and data.
+- Mark them with `@Injectable` so Angular's DI system can provide them.
 
 ```ts
 // car.service.ts

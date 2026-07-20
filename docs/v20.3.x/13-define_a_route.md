@@ -21,3 +21,44 @@ export const routes: Routes = [
   },
 ];
 ```
+
+## Another Example
+
+```ts
+// app.routes.ts — define application routes
+import { Routes } from '@angular/router';
+import { loggedGuard } from './core/guards/logged.guard';
+
+export const routes: Routes = [
+  {
+    path: '',
+    loadChildren: () =>
+      import('./features/auth/auth.routes').then((m) => m.AUTH_ROUTES),
+    canActivate: [loggedGuard],
+  },
+  {
+    path: 'articles',
+    loadChildren: () =>
+      import('./features/articles/articles.routes').then(
+        (m) => m.ARTICLES_ROUTES, // Routes
+      ),
+  },
+  {
+    path: 'dashboard',
+    loadChildren: () =>
+      import('./features/admin/admin.routes').then((m) => m.ADMIN_ROUTES),
+  },
+];
+```
+
+```ts
+// articles.routes.ts
+import { Routes } from '@angular/router';
+import { ArticleListComponent } from './article-list/article-list.component';
+import { ArticleDetailComponent } from './article-details/article-details.component';
+
+export const ARTICLES_ROUTES: Routes = [
+  { path: '', component: ArticleListComponent },
+  { path: ':slug', component: ArticleDetailComponent },
+];
+```
