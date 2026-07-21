@@ -1,10 +1,9 @@
 # TODO List
 
 - [x] Repasar video
-- [ ] Actualizar componentes a v20, ir sección por sección
-  - ?
 - [x] Agregar archivos de configuración (base)
-- [ ] ?
+- [x] Estudiar notas para 20.3.x
+- [ ] Agregar tema base: Angular Material
 - [ ] ?
 - [ ] ?
 - [ ] ?
