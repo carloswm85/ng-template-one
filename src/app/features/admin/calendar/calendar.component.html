@@ -1,1 +1,49 @@
-<p>Admin Calendar Area</p>
+<header>
+  <p class="eyebrow">Schedule</p>
+  <h1>July 2026</h1>
+  <p>Plan editorial work and keep upcoming events visible.</p>
+</header>
+
+<div class="calendar-layout">
+  <mat-card appearance="outlined" class="month-card">
+    <mat-card-header>
+      <mat-card-title>Monthly calendar</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="calendar-grid weekday-row" aria-hidden="true">
+        <span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span>
+      </div>
+      <div class="calendar-grid dates" aria-label="July 2026 calendar">
+        <span class="muted">29</span><span class="muted">30</span>
+        <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span>
+        <span>6</span><span>7</span><span>8</span><span>9</span><span class="event">10</span><span>11</span><span>12</span>
+        <span>13</span><span>14</span><span class="event">15</span><span>16</span><span>17</span><span class="event">18</span><span>19</span>
+        <span>20</span><span>21</span><span>22</span><span class="today">23</span><span class="event">24</span><span>25</span><span>26</span>
+        <span>27</span><span>28</span><span class="event">29</span><span>30</span><span>31</span><span class="muted">1</span><span class="muted">2</span>
+      </div>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card appearance="outlined" class="events-card">
+    <mat-card-header>
+      <mat-card-title>Next up</mat-card-title>
+      <mat-card-subtitle>Upcoming events</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="event-row">
+        <time><strong>24</strong><span>Jul</span></time>
+        <div><strong>Editorial review</strong><span>10:00 · 45 minutes</span></div>
+      </div>
+      <mat-divider></mat-divider>
+      <div class="event-row">
+        <time><strong>29</strong><span>Jul</span></time>
+        <div><strong>August planning</strong><span>14:30 · 1 hour</span></div>
+      </div>
+      <mat-divider></mat-divider>
+      <div class="event-row">
+        <time><strong>03</strong><span>Aug</span></time>
+        <div><strong>Design sync</strong><span>09:00 · 30 minutes</span></div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>

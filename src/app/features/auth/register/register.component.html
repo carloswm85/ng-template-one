@@ -1,1 +1,29 @@
-<p>User Register Form</p>
+<section class="auth-page">
+  <mat-card appearance="outlined">
+    <mat-card-header>
+      <mat-card-title>Create your account</mat-card-title>
+      <mat-card-subtitle>Set up your profile in a few seconds.</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <form>
+        <mat-form-field appearance="outline">
+          <mat-label>Display name</mat-label>
+          <input matInput type="text" autocomplete="name">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Email</mat-label>
+          <input matInput type="email" autocomplete="email">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Password</mat-label>
+          <input matInput type="password" autocomplete="new-password">
+        </mat-form-field>
+        <button mat-flat-button type="button">Create account</button>
+      </form>
+    </mat-card-content>
+    <mat-card-actions>
+      <span>Already registered?</span>
+      <a mat-button routerLink="/login">Sign in</a>
+    </mat-card-actions>
+  </mat-card>
+</section>

@@ -1,11 +1,48 @@
-ul {
-    display: flex;
-    list-style-type: none;
-    gap: 20px;
+:host {
+  display: block;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
 
-    li {
-        background-color: lightblue;
-        padding: 10px 20px;
-        cursor: pointer;
-    }
+.toolbar {
+  gap: 8px;
+  border-bottom: 1px solid var(--mat-sys-outline-variant);
+  background: var(--mat-sys-surface-container);
+}
+
+.brand {
+  color: var(--mat-sys-on-surface);
+  font: var(--mat-sys-title-medium);
+  text-decoration: none;
+}
+
+.desktop-nav,
+.desktop-actions {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.desktop-nav {
+  margin-left: 24px;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.mobile-actions {
+  display: none;
+}
+
+@media (max-width: 760px) {
+  .desktop-nav,
+  .desktop-actions {
+    display: none;
+  }
+
+  .mobile-actions {
+    display: block;
+  }
 }

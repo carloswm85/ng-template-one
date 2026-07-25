@@ -1,0 +1,33 @@
+mat-sidenav-container {
+  min-height: 640px;
+  border: 1px solid var(--mat-sys-outline-variant);
+  border-radius: 24px;
+  background: var(--mat-sys-surface-container-low);
+}
+
+mat-sidenav {
+  width: 220px;
+  padding: 20px 12px;
+  border-right: 1px solid var(--mat-sys-outline-variant);
+  background: var(--mat-sys-surface-container);
+}
+
+.nav-label {
+  margin: 0 16px 12px;
+  color: var(--mat-sys-on-surface-variant);
+  font: var(--mat-sys-label-large);
+}
+
+mat-sidenav-content {
+  padding: 32px;
+}
+
+@media (max-width: 700px) {
+  mat-sidenav {
+    width: 116px;
+  }
+
+  mat-sidenav-content {
+    padding: 20px 16px;
+  }
+}

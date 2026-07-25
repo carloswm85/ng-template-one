@@ -1,0 +1,36 @@
+article {
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+article > a {
+  margin-bottom: 16px;
+}
+
+mat-card {
+  padding: clamp(8px, 3vw, 32px);
+}
+
+mat-card-title {
+  font: var(--mat-sys-headline-large);
+}
+
+mat-card-content {
+  font: var(--mat-sys-body-large);
+  line-height: 1.75;
+}
+
+mat-chip-set {
+  margin: 24px 0;
+}
+
+.lead {
+  color: var(--mat-sys-on-surface-variant);
+  font: var(--mat-sys-title-medium);
+  line-height: 1.6;
+}
+
+h2 {
+  margin-top: 32px;
+  font: var(--mat-sys-headline-small);
+}

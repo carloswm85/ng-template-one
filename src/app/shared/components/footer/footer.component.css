@@ -1,0 +1,9 @@
+footer {
+  padding: 24px 16px;
+  color: var(--mat-sys-on-surface-variant);
+  text-align: center;
+}
+
+p {
+  margin: 0;
+}

@@ -1,13 +1,29 @@
-<nav>
-    <h2>NavBar</h2>
-    <div class="menu">
-        <ul>
-            <li [routerLink]="['/articles']">Articles</li>
-            <li [routerLink]="['/articles', 'details']">Article Details</li>
-            <li [routerLink]="['/dashboard']">Admin Dashboard</li>
-            <li [routerLink]="['/dashboard', 'calendar']">Admin Calendar</li>
-            <li [routerLink]="['/register']">Register</li>
-            <li [routerLink]="['/login']">Login</li>
-        </ul>
-    </div>
-</nav>
+<mat-toolbar class="toolbar">
+  <a class="brand" routerLink="/articles">Angular starter</a>
+
+  <nav class="desktop-nav" aria-label="Primary navigation">
+    <a mat-button routerLink="/articles">Articles</a>
+    <a mat-button routerLink="/dashboard">Dashboard</a>
+    <a mat-button routerLink="/dashboard/calendar">Calendar</a>
+  </nav>
+
+  <span class="spacer"></span>
+
+  <div class="desktop-actions">
+    <a mat-button routerLink="/login">Sign in</a>
+    <a mat-flat-button routerLink="/register">Create account</a>
+  </div>
+
+  <div class="mobile-actions">
+    <button mat-button [matMenuTriggerFor]="mobileMenu" aria-label="Open navigation menu">
+      Menu
+    </button>
+    <mat-menu #mobileMenu="matMenu">
+      <a mat-menu-item routerLink="/articles">Articles</a>
+      <a mat-menu-item routerLink="/dashboard">Dashboard</a>
+      <a mat-menu-item routerLink="/dashboard/calendar">Calendar</a>
+      <a mat-menu-item routerLink="/login">Sign in</a>
+      <a mat-menu-item routerLink="/register">Create account</a>
+    </mat-menu>
+  </div>
+</mat-toolbar>

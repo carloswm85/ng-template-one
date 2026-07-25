@@ -1,1 +1,52 @@
-<p>Admin Dashboard Main Area</p>
+<header>
+  <p class="eyebrow">Overview</p>
+  <h1>Dashboard</h1>
+  <p>A concise view of your workspace this month.</p>
+</header>
+
+<section class="metrics" aria-label="Workspace metrics">
+  <mat-card appearance="outlined">
+    <mat-card-content>
+      <span>Published articles</span>
+      <strong>24</strong>
+      <small>3 added this month</small>
+    </mat-card-content>
+  </mat-card>
+  <mat-card appearance="outlined">
+    <mat-card-content>
+      <span>Drafts in progress</span>
+      <strong>7</strong>
+      <small>2 ready for review</small>
+    </mat-card-content>
+  </mat-card>
+  <mat-card appearance="outlined">
+    <mat-card-content>
+      <span>Scheduled events</span>
+      <strong>12</strong>
+      <small>Next event tomorrow</small>
+    </mat-card-content>
+  </mat-card>
+</section>
+
+<mat-card appearance="outlined" class="activity">
+  <mat-card-header>
+    <mat-card-title>Recent activity</mat-card-title>
+    <mat-card-subtitle>Updates from the last few days</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <div class="activity-row">
+      <div><strong>Designing for focus</strong><span>Article published</span></div>
+      <time>Today, 09:30</time>
+    </div>
+    <mat-divider></mat-divider>
+    <div class="activity-row">
+      <div><strong>July planning</strong><span>Calendar updated</span></div>
+      <time>Yesterday, 16:15</time>
+    </div>
+    <mat-divider></mat-divider>
+    <div class="activity-row">
+      <div><strong>Frontend baseline</strong><span>Draft moved to review</span></div>
+      <time>July 20, 11:45</time>
+    </div>
+  </mat-card-content>
+</mat-card>

@@ -1,1 +1,25 @@
-<p>User Login Form</p>
+<section class="auth-page">
+  <mat-card appearance="outlined">
+    <mat-card-header>
+      <mat-card-title>Welcome back</mat-card-title>
+      <mat-card-subtitle>Sign in to continue to your workspace.</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <form>
+        <mat-form-field appearance="outline">
+          <mat-label>Email</mat-label>
+          <input matInput type="email" autocomplete="email">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Password</mat-label>
+          <input matInput type="password" autocomplete="current-password">
+        </mat-form-field>
+        <button mat-flat-button type="button">Sign in</button>
+      </form>
+    </mat-card-content>
+    <mat-card-actions>
+      <span>New here?</span>
+      <a mat-button routerLink="/register">Create an account</a>
+    </mat-card-actions>
+  </mat-card>
+</section>
