@@ -2,28 +2,81 @@
   <a class="brand" routerLink="/articles">Angular starter</a>
 
   <nav class="desktop-nav" aria-label="Primary navigation">
-    <a mat-button routerLink="/articles">Articles</a>
-    <a mat-button routerLink="/dashboard">Dashboard</a>
-    <a mat-button routerLink="/dashboard/calendar">Calendar</a>
+    <a mat-button routerLink="/articles">
+      <mat-icon fontSet="material-symbols-outlined">article</mat-icon>
+      Articles
+    </a>
+    <a mat-button routerLink="/dashboard">
+      <mat-icon fontSet="material-symbols-outlined">dashboard</mat-icon>
+      Dashboard
+    </a>
+    <a mat-button routerLink="/dashboard/calendar">
+      <mat-icon fontSet="material-symbols-outlined">calendar_month</mat-icon>
+      Calendar
+    </a>
   </nav>
 
   <span class="spacer"></span>
 
   <div class="desktop-actions">
-    <a mat-button routerLink="/login">Sign in</a>
-    <a mat-flat-button routerLink="/register">Create account</a>
+    <button mat-button [matMenuTriggerFor]="themeMenu" aria-label="Select color theme">
+      <mat-icon fontSet="material-symbols-outlined">{{ themeIcon() }}</mat-icon>
+      Theme: {{ theme() }}
+    </button>
+    <a mat-button routerLink="/login">
+      <mat-icon fontSet="material-symbols-outlined">login</mat-icon>
+      Sign in
+    </a>
+    <a mat-flat-button routerLink="/register">
+      <mat-icon fontSet="material-symbols-outlined">person_add</mat-icon>
+      Create account
+    </a>
   </div>
 
   <div class="mobile-actions">
     <button mat-button [matMenuTriggerFor]="mobileMenu" aria-label="Open navigation menu">
-      Menu
+      <mat-icon fontSet="material-symbols-outlined">menu</mat-icon>
     </button>
     <mat-menu #mobileMenu="matMenu">
-      <a mat-menu-item routerLink="/articles">Articles</a>
-      <a mat-menu-item routerLink="/dashboard">Dashboard</a>
-      <a mat-menu-item routerLink="/dashboard/calendar">Calendar</a>
-      <a mat-menu-item routerLink="/login">Sign in</a>
-      <a mat-menu-item routerLink="/register">Create account</a>
+      <a mat-menu-item routerLink="/articles">
+        <mat-icon fontSet="material-symbols-outlined">article</mat-icon>
+        <span>Articles</span>
+      </a>
+      <a mat-menu-item routerLink="/dashboard">
+        <mat-icon fontSet="material-symbols-outlined">dashboard</mat-icon>
+        <span>Dashboard</span>
+      </a>
+      <a mat-menu-item routerLink="/dashboard/calendar">
+        <mat-icon fontSet="material-symbols-outlined">calendar_month</mat-icon>
+        <span>Calendar</span>
+      </a>
+      <button mat-menu-item [matMenuTriggerFor]="themeMenu">
+        <mat-icon fontSet="material-symbols-outlined">{{ themeIcon() }}</mat-icon>
+        <span>Theme: {{ theme() }}</span>
+      </button>
+      <a mat-menu-item routerLink="/login">
+        <mat-icon fontSet="material-symbols-outlined">login</mat-icon>
+        <span>Sign in</span>
+      </a>
+      <a mat-menu-item routerLink="/register">
+        <mat-icon fontSet="material-symbols-outlined">person_add</mat-icon>
+        <span>Create account</span>
+      </a>
     </mat-menu>
   </div>
+
+  <mat-menu #themeMenu="matMenu">
+    <button mat-menu-item (click)="setTheme('system')">
+      <mat-icon fontSet="material-symbols-outlined">brightness_auto</mat-icon>
+      <span>System</span>
+    </button>
+    <button mat-menu-item (click)="setTheme('light')">
+      <mat-icon fontSet="material-symbols-outlined">light_mode</mat-icon>
+      <span>Light</span>
+    </button>
+    <button mat-menu-item (click)="setTheme('dark')">
+      <mat-icon fontSet="material-symbols-outlined">dark_mode</mat-icon>
+      <span>Dark</span>
+    </button>
+  </mat-menu>
 </mat-toolbar>

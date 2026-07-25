@@ -1,5 +1,122 @@
 @import '@angular/material/prebuilt-themes/azure-blue.css';
 
+:root {
+  color-scheme: light;
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root[data-theme='system'] {
+    color-scheme: dark;
+  }
+}
+
+/* Angular Material's dark system colors. Kept at the root so overlays inherit them. */
+:root[data-theme='dark'] {
+  --mat-sys-background: #101414;
+  --mat-sys-error: #ffb4ab;
+  --mat-sys-error-container: #93000a;
+  --mat-sys-inverse-on-surface: #2d3131;
+  --mat-sys-inverse-primary: #006a6a;
+  --mat-sys-inverse-surface: #e0e3e2;
+  --mat-sys-on-background: #e0e3e2;
+  --mat-sys-on-error: #690005;
+  --mat-sys-on-error-container: #ffdad6;
+  --mat-sys-on-primary: #003737;
+  --mat-sys-on-primary-container: #00fbfb;
+  --mat-sys-on-primary-fixed: #002020;
+  --mat-sys-on-primary-fixed-variant: #004f4f;
+  --mat-sys-on-secondary: #1b3534;
+  --mat-sys-on-secondary-container: #cce8e7;
+  --mat-sys-on-secondary-fixed: #051f1f;
+  --mat-sys-on-secondary-fixed-variant: #324b4b;
+  --mat-sys-on-surface: #e0e3e2;
+  --mat-sys-on-surface-variant: #dae5e4;
+  --mat-sys-on-tertiary: #502400;
+  --mat-sys-on-tertiary-container: #ffdcc7;
+  --mat-sys-on-tertiary-fixed: #311300;
+  --mat-sys-on-tertiary-fixed-variant: #723600;
+  --mat-sys-outline: #889392;
+  --mat-sys-outline-variant: #3f4948;
+  --mat-sys-primary: #00dddd;
+  --mat-sys-primary-container: #004f4f;
+  --mat-sys-primary-fixed: #00fbfb;
+  --mat-sys-primary-fixed-dim: #00dddd;
+  --mat-sys-secondary: #b0cccb;
+  --mat-sys-secondary-container: #324b4b;
+  --mat-sys-secondary-fixed: #cce8e7;
+  --mat-sys-secondary-fixed-dim: #b0cccb;
+  --mat-sys-surface: #101414;
+  --mat-sys-surface-bright: #363a39;
+  --mat-sys-surface-container: #1c2020;
+  --mat-sys-surface-container-high: #272b2a;
+  --mat-sys-surface-container-highest: #313635;
+  --mat-sys-surface-container-low: #191c1c;
+  --mat-sys-surface-container-lowest: #0b0f0e;
+  --mat-sys-surface-dim: #101414;
+  --mat-sys-surface-tint: #00dddd;
+  --mat-sys-surface-variant: #3f4948;
+  --mat-sys-tertiary: #ffb787;
+  --mat-sys-tertiary-container: #723600;
+  --mat-sys-tertiary-fixed: #ffdcc7;
+  --mat-sys-tertiary-fixed-dim: #ffb787;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root[data-theme='system'] {
+    --mat-sys-background: #101414;
+    --mat-sys-error: #ffb4ab;
+    --mat-sys-error-container: #93000a;
+    --mat-sys-inverse-on-surface: #2d3131;
+    --mat-sys-inverse-primary: #006a6a;
+    --mat-sys-inverse-surface: #e0e3e2;
+    --mat-sys-on-background: #e0e3e2;
+    --mat-sys-on-error: #690005;
+    --mat-sys-on-error-container: #ffdad6;
+    --mat-sys-on-primary: #003737;
+    --mat-sys-on-primary-container: #00fbfb;
+    --mat-sys-on-primary-fixed: #002020;
+    --mat-sys-on-primary-fixed-variant: #004f4f;
+    --mat-sys-on-secondary: #1b3534;
+    --mat-sys-on-secondary-container: #cce8e7;
+    --mat-sys-on-secondary-fixed: #051f1f;
+    --mat-sys-on-secondary-fixed-variant: #324b4b;
+    --mat-sys-on-surface: #e0e3e2;
+    --mat-sys-on-surface-variant: #dae5e4;
+    --mat-sys-on-tertiary: #502400;
+    --mat-sys-on-tertiary-container: #ffdcc7;
+    --mat-sys-on-tertiary-fixed: #311300;
+    --mat-sys-on-tertiary-fixed-variant: #723600;
+    --mat-sys-outline: #889392;
+    --mat-sys-outline-variant: #3f4948;
+    --mat-sys-primary: #00dddd;
+    --mat-sys-primary-container: #004f4f;
+    --mat-sys-primary-fixed: #00fbfb;
+    --mat-sys-primary-fixed-dim: #00dddd;
+    --mat-sys-secondary: #b0cccb;
+    --mat-sys-secondary-container: #324b4b;
+    --mat-sys-secondary-fixed: #cce8e7;
+    --mat-sys-secondary-fixed-dim: #b0cccb;
+    --mat-sys-surface: #101414;
+    --mat-sys-surface-bright: #363a39;
+    --mat-sys-surface-container: #1c2020;
+    --mat-sys-surface-container-high: #272b2a;
+    --mat-sys-surface-container-highest: #313635;
+    --mat-sys-surface-container-low: #191c1c;
+    --mat-sys-surface-container-lowest: #0b0f0e;
+    --mat-sys-surface-dim: #101414;
+    --mat-sys-surface-tint: #00dddd;
+    --mat-sys-surface-variant: #3f4948;
+    --mat-sys-tertiary: #ffb787;
+    --mat-sys-tertiary-container: #723600;
+    --mat-sys-tertiary-fixed: #ffdcc7;
+    --mat-sys-tertiary-fixed-dim: #ffb787;
+  }
+}
+
 * {
   box-sizing: border-box;
 }
@@ -14,8 +131,19 @@ body {
   background: var(--mat-sys-surface);
   color: var(--mat-sys-on-surface);
   font: var(--mat-sys-body-medium);
+  transition:
+    background-color 180ms ease,
+    color 180ms ease;
 }
 
 a {
   color: var(--mat-sys-primary);
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24;
 }
