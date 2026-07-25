@@ -1,5 +1,5 @@
-- [ng-template-one v20](#ng-template-one-v20)
-  - [Compability](#compability)
+- [ng-template-one v20.3.x](#ng-template-one-v203x)
+  - [Compatibility](#compatibility)
   - [Useful Commands](#useful-commands)
 
 ---
@@ -8,15 +8,17 @@
 
 ---
 
-# ng-template-one v20
+# ng-template-one v20.3.x
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 20.3.x
 
-## Compability
+## Compatibility
 
-| Angular            | Node.js                             | TypeScript     | RxJS               |
-| ------------------ | ----------------------------------- | -------------- | ------------------ |
-| 20.2.x \|\| 20.3.x | ^20.19.0 \|\| ^22.12.0 \|\| ^24.0.0 | >=5.8.0 <6.0.0 | ^6.5.3 \|\| ^7.4.0 |
+| Angular            | Node.js                             | TypeScript     | RxJS               | pnpm |
+| ------------------ | ----------------------------------- | -------------- | ------------------ | ---- |
+| 20.2.x \|\| 20.3.x | ^20.19.0 \|\| ^22.12.0 \|\| ^24.0.0 | >=5.8.0 <6.0.0 | ^6.5.3 \|\| ^7.4.0 | >=10 |
+
+- [Installation commands](https://)
 
 ## Useful Commands
 
