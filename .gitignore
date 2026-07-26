@@ -1,58 +1,56 @@
-.DS_STORE
+# Dependencies
+/node_modules/
+/.pnpm-store/
 
+# Angular build output and cache
 /dist/
-/bazel-out
-/integration/bazel/bazel-*
+/out-tsc/
+/.angular/
+
+# Test output
+/coverage/
+/.nyc_output/
+
+# Logs
 *.log
-node_modules/
-modules/ssr-benchmarks/node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
 
-# Include when developing application packages.
-pubspec.lock
-.c9
-.idea/
-.devcontainer/*
-!.devcontainer/README.md
-!.devcontainer/recommended-devcontainer.json
-!.devcontainer/recommended-Dockerfile
-.settings/
-.vscode/launch.json
-.vscode/settings.json
-.vscode/tasks.json
-*.swo
-*.swp
-modules/.settings
-modules/.vscode
-.vimrc
-.nvimrc
+# Local environment files
+.env
+.env.*
+!.env.example
 
-# Don't check in secret files
-*secret.js
+# TypeScript incremental build information
+*.tsbuildinfo
 
-# Ignore npm/yarn debug log
-npm-debug.log
-yarn-error.log
+# IDE and editor state
+/.idea/
+/.history/
+/.settings/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*~
 
-# build-analytics
-.build-analytics
+# Keep shared VS Code project configuration, ignore local additions
+/.vscode/*
+!/.vscode/extensions.json
+!/.vscode/launch.json
+!/.vscode/settings.json
+!/.vscode/tasks.json
 
-# rollup-test output
-/modules/rollup-test/dist/
+# Operating system files
+.DS_Store
+Thumbs.db
+Desktop.ini
 
-# User specific bazel settings
-.bazelrc.user
-
-# User specific ng-dev settings
-.ng-dev.user*
-
-.notes.md
-baseline.json
-
-# Ignore .history for the xyz.local-history VSCode extension
-.history
-
-# Husky
-.husky/_
-
-# Ignore cache created with the Angular CLI.
-.angular/
+# Temporary files
+*.tmp
+*.temp
+/.cache/
+/.tmp/

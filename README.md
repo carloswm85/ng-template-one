@@ -14,9 +14,14 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Compatibility
 
-| Angular            | Node.js                             | TypeScript     | RxJS               | pnpm |
-| ------------------ | ----------------------------------- | -------------- | ------------------ | ---- |
-| 20.2.x \|\| 20.3.x | ^20.19.0 \|\| ^22.12.0 \|\| ^24.0.0 | >=5.8.0 <6.0.0 | ^6.5.3 \|\| ^7.4.0 | >=10 |
+| Tech Stack       | ~Version                            | Exact Version |
+| ---------------- | ----------------------------------- | ------------- |
+| Angular          | 20.2.x \|\| 20.3.x                  | 20.3.26       |
+| Node.js          | ^20.19.0 \|\| ^22.12.0 \|\| ^24.0.0 | 24.0.0        |
+| TypeScript       | >=5.8.0 <6.0.0                      | 5.9.3         |
+| RxJS             | ^6.5.3 \|\| ^7.4.0                  | 7.8           |
+| pnpm             | >=10                                | 11.17         |
+| Angular Material | 20.2.14                             | 20.2.14       |
 
 - [Installation commands](https://)
 
