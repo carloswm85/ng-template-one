@@ -1,18 +1,23 @@
-- [ng-template-one v20.3.x](#ng-template-one-v203x)
-  - [Compatibility](#compatibility)
-  - [Useful Commands](#useful-commands)
+- [ng-template-one v20.3.x - Current Template Description](#ng-template-one-v203x---current-template-description)
+  - [Compatibility Brief](#compatibility-brief)
+  - [(1) Overview](#1-overview)
+  - [(2) Technology stack](#2-technology-stack)
+  - [(3) Architecture](#3-architecture)
+  - [(4) Implemented features](#4-implemented-features)
+  - [(5) Current maturity](#5-current-maturity)
 
 ---
 
-- Architecture (in Spanish): <https://youtu.be/kLUdumt8lNY>
+# ng-template-one v20.3.x - Current Template Description
+
+![under_construction](./docs/img/under-construction.jpg)
+
+- Main repo: <https://github.com/carloswm85/ng-template-one>
+- Based on architecture (in Spanish): <https://youtu.be/kLUdumt8lNY>
 
 ---
 
-# ng-template-one v20.3.x
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 20.3.x
-
-## Compatibility
+## Compatibility Brief
 
 | Tech Stack       | ~Version                            | Exact Version |
 | ---------------- | ----------------------------------- | ------------- |
@@ -23,17 +28,98 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 | pnpm             | >=10                                | 11.17         |
 | Angular Material | 20.2.14                             | 20.2.14       |
 
-- [Installation commands](https://)
+- Project docs:
+  - [Installation commands](./docs/content/installation_commands.md)
+- Online docs:
+  - <https://v20.angular.dev/reference/versions>
 
-## Useful Commands
+---
 
-| Command                        | Description                                                                                                                                                                                       |
-| ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `npm install -g pnpm`          | Installs **pnpm** globally using npm, making the `pnpm` command available from any terminal.                                                                                                      |
-| `pnpm install`                 | Installs all project dependencies defined in `package.json` and `pnpm-lock.yaml`, creating or updating the `node_modules` directory.                                                              |
-| `ng serve`                     | Builds the application, starts a local development server, watches for file changes, and automatically reloads the browser. By default, the application is available at `http://localhost:4200/`. |
-| `ng generate component <name>` | Generates a new component. Also supports: `directive`, `pipe`, `service`, `class`, `guard`, `interface`, `enum`, `module`, and many other Angular schematics.                                     |
-| `ng build`                     | Compiles the application for deployment. The build artifacts are stored in the `dist/` directory. Use `--configuration production` (or `-c production`) for an optimized production build.        |
-| `ng test`                      | Executes the project's unit tests using **Karma** and **Jasmine** by default. Runs in watch mode unless `--watch=false` is specified.                                                             |
-| `ng e2e`                       | Executes end-to-end (E2E) tests using a supported testing framework. This command requires an E2E package (such as Playwright or Cypress) to be configured in the project.                        |
-| `ng help`                      | Displays help information for Angular CLI commands. For complete documentation, see the Angular CLI Overview and Command Reference.                                                               |
+## (1) Overview
+
+`ng-template-one` is an Angular 20.3 starter application demonstrating a modern, feature-oriented architecture and an Angular Material 3 interface.
+
+It currently resembles a responsive content-management workspace with articles, authentication screens, a dashboard, and a calendar. Most data and interactions are presentational rather than connected to real application logic.
+
+---
+
+## (2) Technology stack
+
+| Area                | Technology                                               |
+| ------------------- | -------------------------------------------------------- |
+| Framework           | Angular 20.3.26                                          |
+| Language            | TypeScript 5.9.3                                         |
+| UI components       | Angular Material 20.2.14                                 |
+| Component utilities | Angular CDK 20.2.14                                      |
+| Reactive library    | RxJS 7.8                                                 |
+| Package manager     | pnpm 11.17                                               |
+| Testing             | Jasmine and Karma                                        |
+| Architecture        | Standalone components with lazy-loaded routes            |
+| Theme               | Material 3 Azure Blue with light, dark, and system modes |
+
+---
+
+## (3) Architecture
+
+The application uses a feature-oriented structure:
+
+| Directory            | Responsibility                                         |
+| -------------------- | ------------------------------------------------------ |
+| `core/`              | Global services, models, guards, and HTTP interceptors |
+| `features/auth/`     | Sign-in and registration screens                       |
+| `features/articles/` | Article listing and article details                    |
+| `features/admin/`    | Dashboard, calendar, and admin layout                  |
+| `shared/components/` | Navigation bar and footer                              |
+| `docs/`              | Angular 20.3 learning notes and project documentation  |
+
+Routes are separated by feature and lazy-loaded:
+
+| Route                 | Feature              |
+| --------------------- | -------------------- |
+| `/login`              | Sign-in screen       |
+| `/register`           | Account registration |
+| `/articles`           | Article list         |
+| `/articles/:slug`     | Article details      |
+| `/dashboard`          | Admin overview       |
+| `/dashboard/calendar` | Admin calendar       |
+
+---
+
+## (4) Implemented features
+
+- Responsive Angular Material application shell.
+- Desktop navigation and mobile menu.
+- Persistent light, dark, and system theme selection.
+- Three sample article cards.
+- Presentational article detail page.
+- Presentational login and registration forms.
+- Admin side navigation.
+- Dashboard metrics and recent activity.
+- July 2026 calendar and upcoming events.
+- HTTP client configured with a functional interceptor.
+- Route guard structure.
+- Responsive layouts using Material system variables.
+
+---
+
+## (5) Current maturity
+
+- The project is a polished frontend prototype and architectural template, not yet a functional production application.
+- Remember this is a under-development template project.
+
+| Area                | Status | Current state                                         |
+| ------------------- | ------ | ----------------------------------------------------- |
+| Authentication      | ⚠️     | UI only; no login or registration behavior            |
+| Route authorization | ❌     | Guard exists but always returns `true`                |
+| HTTP authentication | ❌     | Interceptor forwards requests unchanged               |
+| Articles            | ⚠️     | Hard-coded presentation data                          |
+| Article slug        | ⚠️     | Route is dynamic, but the displayed article is static |
+| Dashboard           | ⚠️     | Hard-coded metrics and activity                       |
+| Calendar            | ⚠️     | Hard-coded July 2026 schedule                         |
+| Services            | ❌     | `ArticlesService` exists but has no implementation    |
+| Backend/API         | ❌     | None visible                                          |
+| Unit tests          | ⚠️     | Only a basic root-component creation test             |
+| E2E tests           | ❌     | Not configured                                        |
+| Root route          | ❌     | No default component or redirect is defined           |
+
+Check `TODO.md` for future implementations.
