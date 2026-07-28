@@ -56,7 +56,7 @@ It currently resembles a responsive content-management workspace with articles, 
 | Testing             | Jasmine and Karma                                        |
 | Architecture        | Standalone components with lazy-loaded routes            |
 | Theme               | Material 3 Azure Blue with light, dark, and system modes |
-| Icons               |                                                          |
+| Icons               | Material Symbols                                                         |
 
 ---
 
