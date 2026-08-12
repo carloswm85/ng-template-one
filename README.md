@@ -5,6 +5,7 @@
   - [(3) Architecture](#3-architecture)
   - [(4) Implemented features](#4-implemented-features)
   - [(5) Current maturity](#5-current-maturity)
+- [Angular 20 CLI commands](#angular-20-cli-commands)
 
 ---
 
@@ -56,7 +57,7 @@ It currently resembles a responsive content-management workspace with articles, 
 | Testing             | Jasmine and Karma                                        |
 | Architecture        | Standalone components with lazy-loaded routes            |
 | Theme               | Material 3 Azure Blue with light, dark, and system modes |
-| Icons               | Material Symbols                                                         |
+| Icons               | Material Symbols                                         |
 
 ---
 
@@ -124,3 +125,34 @@ Routes are separated by feature and lazy-loaded:
 | Root route          | ❌     | No default component or redirect is defined           |
 
 Check `TODO.md` for future implementations.
+
+---
+
+# Angular 20 CLI commands
+
+This project was generated with **Angular CLI 20**.
+
+| Task                     | Command                                | Description                                                                                                                                                                                                  |
+| ------------------------ | -------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Development server       | `ng serve`                             | Starts the Vite-based development server at `http://localhost:4200/`. The application rebuilds and reloads automatically when source files change. ([Angular][1])                                            |
+| Generate component       | `ng generate component component-name` | Generates a new Angular component. The shorthand `ng g c component-name` can also be used. ([Angular][2])                                                                                                    |
+| Generate other artifacts | large_command \*                       | Generates Angular directives, pipes, services, classes, guards, interfaces, enums, or modules.                                                                                                               |
+| Build                    | `ng build`                             | Builds the application. By default, Angular uses the optimized production configuration. Build output is stored under `dist/`. ([Angular][3])                                                                |
+| Unit tests               | `ng test`                              | Runs unit tests. In Angular 20, the standard CLI setup uses **Jasmine + Karma**; Vitest support exists but was experimental in Angular 20. ([Angular][4])                                                    |
+| End-to-end tests         | `ng e2e`                               | Builds and serves the application, then runs the configured E2E test runner. If none is configured, Angular CLI can guide you through adding one such as Cypress, Nightwatch, or WebdriverIO. ([Angular][5]) |
+| Angular CLI help         | `ng help`                              | Displays available Angular CLI commands and help.                                                                                                                                                            |
+| Angular CLI AI/MCP       | `ng mcp`                               | Starts Angular CLI's experimental MCP server for integration with AI development tools. This capability is available in Angular 20. ([Angular][6])                                                           |
+| Documentation            | —                                      | Angular 20 documentation: [https://v20.angular.dev/](https://v20.angular.dev/). ([Angular][7])                                                                                                               |
+
+- large_command: `ng generate directive\|pipe\|service\|class\|guard\|interface\|enum\|module`
+
+> **Angular 20 note:** Do not change the testing row to Vitest when documenting a standard Angular 20 project. Vitest became the default for new Angular CLI projects in **Angular 21**; in Angular 20 it was still experimental. ([Angular Blog][8])
+
+[1]: https://angular.dev/cli/serve?utm_source=chatgpt.com 'ng serve'
+[2]: https://angular.dev/cli/generate/component?utm_source=chatgpt.com 'generate component'
+[3]: https://angular.dev/cli/build?utm_source=chatgpt.com 'ng build'
+[4]: https://v20.angular.dev/guide/testing 'Testing • Overview • Angular'
+[5]: https://angular.dev/tools/cli/end-to-end?utm_source=chatgpt.com 'End-to-End Testing'
+[6]: https://v20.angular.dev/ai/mcp?utm_source=chatgpt.com 'Angular CLI MCP Server setup'
+[7]: https://v20.angular.dev/?utm_source=chatgpt.com 'Home • Angular'
+[8]: https://blog.angular.dev/announcing-angular-v20-b5c9c06cf301?utm_source=chatgpt.com 'Announcing Angular v20 - by Minko Gechev'
